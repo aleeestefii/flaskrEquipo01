@@ -1,1 +1,2 @@
 # flaskrEquipo01
+We developed a web app that aggregates and displays content from three different websites, following design patterns from Activity 1 and built with Flask. A ‘scrape’ command runs scrapers from Activity 3 to save data into a database. The homepage shows scraped titles and links—logged-out users see all content, while logged-in users only see what they chose during signup. Finally, we deployed the app on a Raspberry Pi.
