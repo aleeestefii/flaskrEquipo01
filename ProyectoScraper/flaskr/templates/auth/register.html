@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Registrarse{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post" onsubmit="return validateForm()">
+    <label for="username">Usuario</label>
+    <input name="username" id="username" required>
+
+    <label for="password">Contraseña</label>
+    <input type="password" name="password" id="password" required>
+
+    <div>
+      <fieldset>
+        <legend>Selecciona la información que quieras ver:</legend>
+
+        <input type="checkbox" name="selected_site" id="checkbox1" value="star_info">
+        <label for="checkbox1">El ciclo de vida de las estrellas</label>
+        <br>
+
+        <input type="checkbox" name="selected_site" id="checkbox2" value="fashion_article">
+        <label for="checkbox2">Articulo Nylon</label>
+        <br>
+
+        <input type="checkbox" name="selected_site" id="checkbox3" value="video_game">
+        <label for="checkbox3">Los mejores videojuegos del 2023</label>
+      </fieldset>
+    </div>
+
+    <br>
+    <input type="submit" value="Registrarse">
+  </form>
+  <p><a href="{{ url_for('index') }}">Regresar</a></p>
+
+  <script>
+    function validateForm() {
+      const checkboxes = document.querySelectorAll('input[name="selected_site"]');
+      let isChecked = false;
+      checkboxes.forEach((checkbox) => {
+        if (checkbox.checked) {
+          isChecked = true;
+        }
+      });
+
+      if (!isChecked) {
+        alert("Debes seleccionar al menos una opción.");
+        return false;
+      }
+      return true;
+    }
+  </script>
+{% endblock %}

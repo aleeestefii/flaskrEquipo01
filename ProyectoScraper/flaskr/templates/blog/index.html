@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>Información</h1>
+{% endblock %}
+
+{% block content %}
+  {% if fashion_articles %}
+    <h2>Artículos cultura</h2>
+    <ul>
+      {% for article in fashion_articles %}
+        <li>
+          <strong>{{ article.title }}</strong> ({{ article.site_name }}) - {{ article.section }}<br>
+          <a href="{{ article.url }}" target="_blank">Leer más</a><br>
+          {{ article.description }}
+          {% if article.main_image_url %}
+            <br><img src="{{ article.main_image_url }}" alt="{{ article.title }}" style="max-width: 200px;">
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if video_games %}
+    <h2>Los mejores videojuegos del 2023</h2>
+    <ul>
+      {% for game in video_games %}
+        <li>
+          <strong>{{ game.game_name }}</strong> - Fecha de lanzamiento: {{ game.release_date }}<br>
+          <a href="{{ game.reason_url }}" target="_blank">¿Por qué es uno de los mejores juegos del año?</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if star_infos %}
+  <h2>La vida de las estrellas de Estrellas</h2>
+  <ul>
+    {% for star in star_infos %}
+    <li>
+      <strong>{{ star.title }}</strong> (Categoría: {{ star.category }})<br>
+      <a href="{{ star.learn_more }}" target="_blank">Más información</a><br>
+      {% if star.image_url %}
+      <img src="{{ star.image_url }}" alt="{{ star.title }}" style="max-width: 200px;">
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% endblock %}

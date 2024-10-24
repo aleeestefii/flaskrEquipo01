@@ -1,0 +1,169 @@
+html {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: #f8f8f8;
+    padding: 1rem;
+    line-height: 1.5;
+  }
+  body {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+  }
+  h1 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #212121;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  
+  a {
+    color: #800080;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  hr {
+    border: none;
+    border-top: 2px solid #e0e0e0;
+    margin: 2rem 0;
+  }
+  
+  nav {
+    background: #e0e0e0;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-bottom: 2px solid #bdbdbd;
+  }
+  
+  nav h1 {
+    flex: auto;
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  nav h1 a {
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    color: #212121;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li a, nav ul li span, header .action {
+    display: block;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .content {
+    padding: 0 1rem 1rem;
+  }
+  
+  .content > header {
+    border-bottom: 2px solid #e0e0e0;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+  }
+  
+  .content > header h1 {
+    flex: auto;
+    margin: 1rem 0 0.25rem 0;
+    font-size: 2rem;
+  }
+  
+  .flash {
+    margin: 1em 0;
+    padding: 1em;
+    background: #cae6f6;
+    border: 1px solid #377ba8;
+    border-left: 8px solid #0056b3;
+  }
+  
+  .post > header {
+    display: flex;
+    align-items: flex-end;
+    font-size: 0.85em;
+    margin-bottom: 1rem;
+  }
+  
+  .post > header > div:first-of-type {
+    flex: auto;
+  }
+  
+  .post > header h1 {
+    font-size: 1.5em;
+    margin-bottom: 0;
+  }
+  
+  .post .about {
+    color: slategray;
+    font-style: italic;
+  }
+  
+  .post .body {
+    white-space: pre-line;
+    margin-top: 1rem;
+  }
+  
+  .content:last-child {
+    margin-bottom: 0;
+  }
+  
+  .content form {
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content label {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+  
+  .content input, .content textarea {
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border: 1px solid #bdbdbd;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .content textarea {
+    min-height: 12em;
+    resize: vertical;
+  }
+  
+  input.danger {
+    color: #cc2f2e;
+  }
+  
+  input[type=submit] {
+    align-self: start;
+    min-width: 10em;
+    background-color: #0056b3;
+    color: white;
+    padding: 0.5em;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #003d80;
+  }
+  
